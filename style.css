@@ -1,30 +1,186 @@
-:root{
-    --color: white !important;
+:root {
+  --color-bg: #d71515;
+  --color-bg2: #a02828;
+  --color-bg3: #fbf7cc;
 }
-.blanco{
-    color: var(--color);
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
 }
-.circulo{
-    width: 100px;
-     height: 100px;
-     -moz-border-radius: 50%;
-     -webkit-border-radius: 50%;
-     border-radius: 50%;
-     background: #0baeb4;
+
+.first-main {
+  display: grid;
+  place-items: center;
+  transform: scale(0.75);
 }
-.circuloPequeño{
-    width: 50px;
-     height: 50px;
-     -moz-border-radius: 50%;
-     -webkit-border-radius: 50%;
-     border-radius: 50%;
-     background: yellow;
+
+.wrap-container {
+  width: 50rem;
+  height: 62rem;
+  background-color: var(--color-bg);
+  border-radius: 5rem;
+  outline: 1rem solid #c31515;
 }
-.circuloPequeño2{
-    width: 50px;
-     height: 50px;
-     -moz-border-radius: 50%;
-     -webkit-border-radius: 50%;
-     border-radius: 50%;
-     background: green;
+
+.main-container {
+  width: 47rem;
+  height: 35rem;
+  background-color: var(--color-bg2);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  border: 0.4rem ridge #971a1a;
+}
+
+.subcontainer {
+  width: 100%;
+  max-width: 44rem;
+  background-color: rgb(161, 159, 159);
+  border: 0.3rem double rgb(80 74 74);
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  margin: 1.5rem 4rem 0;
+}
+
+.subcontainer-bg {
+  background-color: var(--color-bg3);
+  width: 100%;
+  height: 450px;
+  border-style: solid;
+  margin: 1rem;
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+
+.circle-container {
+  width: 100%;
+  margin: 3rem 0rem 0 2rem;
+}
+
+.circle {
+  width: 6.5rem;
+  height: 6.5rem;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #0baeb4;
+  position: relative;
+  border: 0.8rem solid white;
+  box-shadow: rgb(255 255 255 / 39%) 0px 0px 0px 2px,
+    rgb(40 38 38) 0px 4px 6px -1px, rgb(32 29 29 / 85%) 3px 4px 22px inset;
+}
+
+.circle::after {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: yellow;
+  position: absolute;
+  top: -2.5rem;
+  right: -4.2rem;
+  box-shadow: rgb(255 255 255 / 39%) 0px 0px 0px 2px,
+    rgb(0 0 0 / 74%) 0px 4px 6px -1px,
+    rgb(64 64 63 / 32%) 1px -3px 10px 7px inset;
+}
+
+.circle::before {
+  content: "";
+  width: 2.5rem;
+  height: 2.5rem;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: green;
+  position: absolute;
+  top: -3.3rem;
+  right: -8.5rem;
+  box-shadow: rgb(255 255 255 / 39%) 0px 0px 0px 2px,
+    rgb(0 0 0 / 74%) 0px 4px 6px -1px,
+    rgb(52 50 50 / 46%) 1px -3px 10px 7px inset;
+}
+
+.search-pokemon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  column-gap: 4rem;
+  margin-top: 3rem;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-family: inherit;
+  margin: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-weight: 900;
+}
+
+.subtitle {
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: revert;
+    margin: 0;
+    letter-spacing: 0.3rem;
+}
+
+img.img-add {
+  width: 5rem;
+}
+
+button#CambioPokemon {
+  outline: unset;
+  background-color: unset;
+  border: unset;
+  padding: unset;
+}
+
+button#CambioPokemon:hover {
+  transform: scale(0.8);
+}
+
+input#pokeName {
+  width: 100%;
+  max-width: 22rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background-color: #8add8a;
+  border: unset;
+  outline: unset;
+  font-size: 1.5rem;
+  font-family: monospace;
+  text-align: center;
+  border: 0.4rem solid #78bd78;
+  color: #363636;
+}
+
+.image-container {
+    margin-left: 5rem;
+}
+
+.modal-header{
+  background-color: var(--color-bg);
+  color: white;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+}
+
+h5#exampleModalLabel {
+  font-size: 1.7rem;
 }

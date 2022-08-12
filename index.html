@@ -1,70 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    
-    <title>Pokedex LaunchX</title>
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+  </script>
+
+  <title>Pokedex LaunchX</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: black;">
-    <h1 class="blanco">Pokedex LaunchX</h1>
-    <div>
-        <label class="blanco d-flex justify-content-center"><strong>Busca tu pokemon</strong></label>
-        <div class="d-flex justify-content-center mb-4">
-            <input type="text" placeholder="pikachu" class="" name="pokeName" id="pokeName" style="display:block;">
-            <span id="Span"></span>
-            <button id="CambioPokemon" class="ml-2 btn btn-primary">Buscar</button>
+
+<body>
+  <h1 class="title">Pokedex LaunchX</h1>
+  <label class="subtitle">Busca tu pokemon</label>
+
+  <main class="first-main">
+    <div class="wrap-container">
+      <div class="circle-container">
+        <div class="circle">
         </div>
-        
-    </div>
-    <div style="background-color: red; height: 700px;" class="container">
-        <div class="mb-2 py-2 d-flex " style="max-width: 430px;" >
-            <div class="ml-3 circulo">
+      </div>
+
+      <div class="main-container">
+        <div class="subcontainer">
+          <div class="subcontainer-bg">
+            <label id="NombrePokemonAccion" class="d-flex justify-content-center mt-2 mb-5"></label>
+            <div id="CaracteristicasPokemon">
 
             </div>
-            <div class="ml-4 circuloPequeño">
+            <div class="row align-items-center" style="height: 250px;">
+              <div class="image-container">
+                <img src="./pokebola.png" id="pokeImg" width="150px" alt="" style="display:block;">
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled" id="StatsPokemon">
 
-            </div>
-            <div class="ml-4 circuloPequeño2">
-
-            </div>
-        </div>
-        <div style="background-color: rgb(161, 159, 159); max-width:680px; border-style: solid;" class="container">
-            <div style="background-color:white; max-width: 640px; height: 450px; border-style: solid;" class="container mb-3 mt-3">
-                <label id="NombrePokemonAccion" class="d-flex justify-content-center mt-2 mb-5"></label>
-                <div id="CaracteristicasPokemon">
+                </ul>
+                <div id="BotonMovimientos">
 
                 </div>
-                <div class="row align-items-center" style="height: 250px;">
-                    <div class="col-6 d-flex justify-content-center" >
-                        <img src="./pokebola.png" id="pokeImg" width="150px" alt="" style="display:block;">
-                    </div>
-                    <div class="col-6" >
-                        <ul class="list-unstyled" id="StatsPokemon">
 
-                        </ul>
-                        <div id="BotonMovimientos">
+              </div>
 
-                        </div>
-                       
-                    </div>
-                   
-                </div>
-                
             </div>
+
+          </div>
         </div>
-        
-       
-        
+      </div>
+
+      <div class="search-pokemon">
+        <input type="text" placeholder="pikachu" class="input-text" name="pokeName" id="pokeName">
+        <button id="CambioPokemon" class="btn-search"><img class="img-add" src="add.png" alt="add"></button>
+      </div>
+
     </div>
-    <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  </main>
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header">
@@ -74,21 +79,22 @@
           </button>
         </div>
         <div class="modal-body">
-            <div class="row "  id="MovimientoPokemon">
-                
-            </div>
+          <div class="row " id="MovimientoPokemon">
+
+          </div>
           <ul class="list-unstyled">
 
           </ul>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          
+
         </div>
       </div>
     </div>
   </div>
-    <script src="./script.js"></script>
-    
+  <script src="./script.js"></script>
+
 </body>
+
 </html>
